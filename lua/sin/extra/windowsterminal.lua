@@ -1,9 +1,9 @@
-local colors = require("cyberdream.colors")
-local util = require("cyberdream.util")
+local colors = require("sin.colors")
+local util = require("sin.util")
 
 local M = {}
 
---- Generate cyberdream theme for windows terminal.
+--- Generate sin theme for windows terminal.
 --- @param variant string: Variation of the colorscheme to use.
 function M.generate(variant)
     local template = [==[
@@ -23,7 +23,7 @@ function M.generate(variant)
     "cyan": "${cyan}",
     "foreground": "${fg}",
     "green": "${green}",
-    "name": "cyberdream",
+    "name": "sin",
     "purple": "${purple}",
     "red": "${red}",
     "selectionBackground": "${bgHighlight}",

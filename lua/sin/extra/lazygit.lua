@@ -1,5 +1,5 @@
-local colors = require("cyberdream.colors")
-local util = require("cyberdream.util")
+local colors = require("sin.colors")
+local util = require("sin.util")
 
 local M = {}
 
@@ -8,7 +8,7 @@ local M = {}
 function M.generate(variant)
     local template = [==[
 # yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
-# cyberdream theme for lazygit
+# sin theme for lazygit
 gui:
     border: rounded
     theme:

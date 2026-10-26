@@ -1,5 +1,5 @@
-local colors = require("cyberdream.colors")
-local util = require("cyberdream.util")
+local colors = require("sin.colors")
+local util = require("sin.util")
 
 local M = {}
 

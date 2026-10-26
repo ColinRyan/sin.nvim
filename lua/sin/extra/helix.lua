@@ -1,13 +1,13 @@
-local colors = require("cyberdream.colors")
-local util = require("cyberdream.util")
+local colors = require("sin.colors")
+local util = require("sin.util")
 
 local M = {}
 
---- Generate cyberdream theme for helix.
+--- Generate sin theme for helix.
 --- @param variant string: Variation of the colorscheme to use.
 function M.generate(variant)
     local template = [==[
-# cyberdream theme for helix
+# sin theme for helix
 "ui.background" = "bg"
 "ui.text" = "fg"
 "ui.cursor" = { bg = "fg", fg = "bg" }

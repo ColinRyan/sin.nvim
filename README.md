@@ -1,21 +1,21 @@
 <p align="center">
-    <img src="https://github.com/scottmckendry/cyberdream.nvim/assets/39483124/e758f47a-32eb-4eac-a008-eb59272badef">
+    <img src="https://github.com/scottmckendry/sin.nvim/assets/39483124/e758f47a-32eb-4eac-a008-eb59272badef">
      <b><i>A high-contrast, futuristic & vibrant theme for neovim</i></b>
 </p>
 
 <p align="center">
-    <a href="https://github.com/scottmckendry/cyberdream.nvim/issues">
-        <img alt="Issues" src="https://img.shields.io/github/issues/scottmckendry/cyberdream.nvim?style=for-the-badge&logo=github&color=%23ffbd5e">
+    <a href="https://github.com/scottmckendry/sin.nvim/issues">
+        <img alt="Issues" src="https://img.shields.io/github/issues/scottmckendry/sin.nvim?style=for-the-badge&logo=github&color=%23ffbd5e">
     </a>
-    <a href="https://github.com/scottmckendry/cyberdream.nvim/blob/main/LICENSE">
-        <img alt="License" src="https://img.shields.io/github/license/scottmckendry/cyberdream.nvim?style=for-the-badge&logo=github&color=%235ef1ff">
+    <a href="https://github.com/scottmckendry/sin.nvim/blob/main/LICENSE">
+        <img alt="License" src="https://img.shields.io/github/license/scottmckendry/sin.nvim?style=for-the-badge&logo=github&color=%235ef1ff">
     </a>
-    <a href="https://github.com/scottmckendry/cyberdream.nvim/stars">
-        <img alt="stars" src="https://img.shields.io/github/stars/scottmckendry/cyberdream.nvim?style=for-the-badge&logo=github&color=%23bd5eff">
+    <a href="https://github.com/scottmckendry/sin.nvim/stars">
+        <img alt="stars" src="https://img.shields.io/github/stars/scottmckendry/sin.nvim?style=for-the-badge&logo=github&color=%23bd5eff">
     </a>
     <br>
-    <a href="https://dotfyle.com/plugins/scottmckendry/cyberdream.nvim">
-     <img src="https://dotfyle.com/plugins/scottmckendry/cyberdream.nvim/shield?style=for-the-badge" />
+    <a href="https://dotfyle.com/plugins/scottmckendry/sin.nvim">
+     <img src="https://dotfyle.com/plugins/scottmckendry/sin.nvim/shield?style=for-the-badge" />
     </a>
 </p>
 
@@ -46,8 +46,8 @@
     </ul>
 </details>
 
-![image](https://github.com/scottmckendry/cyberdream.nvim/assets/39483124/55ad863e-11e6-4539-bf67-118ea328fb5b)
-![image](https://github.com/scottmckendry/cyberdream.nvim/assets/39483124/387a32f3-da38-4e96-b1e6-ea55591ec9ae)
+![image](https://github.com/scottmckendry/sin.nvim/assets/39483124/55ad863e-11e6-4539-bf67-118ea328fb5b)
+![image](https://github.com/scottmckendry/sin.nvim/assets/39483124/387a32f3-da38-4e96-b1e6-ea55591ec9ae)
 
 ## 📦 Installation
 
@@ -55,7 +55,7 @@ Lazy<sup>1</sup>:
 
 ```lua
 {
-    "scottmckendry/cyberdream.nvim",
+    "scottmckendry/sin.nvim",
     lazy = false,
     priority = 1000,
 }
@@ -64,18 +64,18 @@ Lazy<sup>1</sup>:
 Packer:
 
 ```lua
-use { "scottmckendry/cyberdream.nvim" }
+use { "scottmckendry/sin.nvim" }
 ```
 
 Lualine (optional):
 
 ```lua
 {
-    local cyberdream = require("lualine.themes.cyberdream").get_theme() -- as of v2.0.0. For older versions, use `require("lualine.themes.cyberdream")`
+    local sin = require("lualine.themes.cyberdream").get_theme() -- as of v2.0.0. For older versions, use `require("lualine.themes.cyberdream")`
     require("lualine").setup({
         -- ... other config
         options = {
-            theme = "cyberdream",
+            theme = "sin",
         },
         -- ... other config
     })
@@ -87,7 +87,7 @@ See my personal lualine config [here](https://github.com/scottmckendry/Windots/b
 ## 🎨 Usage
 
 ```lua
-vim.cmd("colorscheme cyberdream")
+vim.cmd("colorscheme sin")
 ```
 
 ## ⚙️ Configuring
@@ -96,7 +96,7 @@ Calling `setup` is optional, but allows you to configure the theme to your likin
 Below is an example of all the available configuration options with their default values:
 
 ```lua
-require("cyberdream").setup({
+require("sin").setup({
     -- Enable transparent background
     transparent = false,
 
@@ -121,12 +121,12 @@ require("cyberdream").setup({
             -- Example:
             Comment = { fg = "#696969", bg = "NONE", italic = true },
 
-            -- Complete list can be found in `lua/cyberdream/theme.lua`
+            -- Complete list can be found in `lua/sin/theme.lua`
         },
 
         -- Override a color entirely
         colors = {
-            -- For a list of colors see `lua/cyberdream/colours.lua`
+            -- For a list of colors see `lua/sin/colours.lua`
             -- Example:
             bg = "#000000",
             green = "#00ff00",
@@ -144,7 +144,7 @@ Include these alongside the `setup` function to add additional functionality to 
 
 ```lua
 -- Add a custom keybinding to toggle the colorscheme
-vim.api.nvim_set_keymap("n", "<leader>tt", ":CyberdreamToggleMode<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>tt", ":sinToggleMode<CR>", { noremap = true, silent = true })
 ```
 
 #### Create an `autocmd` to hook into the toggle event and run custom code
@@ -152,7 +152,7 @@ vim.api.nvim_set_keymap("n", "<leader>tt", ":CyberdreamToggleMode<CR>", { norema
 ```lua
 -- The event data property will contain a string with either "default" or "light" respectively
 vim.api.nvim_create_autocmd("User", {
-    pattern = "CyberdreamToggleMode",
+    pattern = "sinToggleMode",
     callback = function(event)
         -- Your custom code here!
         -- For example, notify the user that the colorscheme has been toggled
@@ -161,7 +161,7 @@ vim.api.nvim_create_autocmd("User", {
 })
 ```
 
-![image](https://github.com/scottmckendry/cyberdream.nvim/assets/39483124/c0188d60-d62b-4a15-965d-a19757c484e6)
+![image](https://github.com/scottmckendry/sin.nvim/assets/39483124/c0188d60-d62b-4a15-965d-a19757c484e6)
 
 ## 🤝 Contributing
 

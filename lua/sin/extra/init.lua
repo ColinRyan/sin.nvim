@@ -42,9 +42,9 @@ local function generate_extras(variant)
     local suffix = variant == "default" and "" or "-" .. variant
 
     for name, extra in pairs(M.extras) do
-        local extra_module = require("cyberdream.extra." .. name)
+        local extra_module = require("sin.extra." .. name)
         local str = extra_module.generate(variant)
-        write(str, extra.name .. "/" .. "cyberdream" .. suffix .. "." .. extra.extension)
+        write(str, extra.name .. "/" .. "sin" .. suffix .. "." .. extra.extension)
     end
 end
 

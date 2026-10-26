@@ -1,5 +1,5 @@
-local colors = require("cyberdream.colors")
-local util = require("cyberdream.util")
+local colors = require("sin.colors")
+local util = require("sin.util")
 
 local M = {}
 
@@ -8,7 +8,7 @@ local M = {}
 function M.generate(variant)
     local t = colors[variant]
     local template = [==[
-# cyberdream theme for kitty
+# sin theme for kitty
 background            ${bg}
 foreground            ${fg}
 cursor                ${fg}

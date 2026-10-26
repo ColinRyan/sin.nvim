@@ -1,9 +1,9 @@
-local colors = require("cyberdream.colors")
-local util = require("cyberdream.util")
+local colors = require("sin.colors")
+local util = require("sin.util")
 
 local M = {}
 
---- Generate cyberdream theme for textmate.
+--- Generate sin theme for textmate.
 --- @param variant string: Variation of the colorscheme to use.
 function M.generate(variant)
     local template = [==[
@@ -12,7 +12,7 @@ function M.generate(variant)
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Cyberdream</string>
+	<string>sin</string>
 	<key>settings</key>
 	<array>
 		<dict>
@@ -939,7 +939,7 @@ function M.generate(variant)
 	<key>colorSpaceName</key>
 	<string>sRGB</string>
 	<key>semanticClass</key>
-	<string>theme.cyberdream</string>
+	<string>theme.sin</string>
 	<key>author</key>
 	<string>Scott McKendry</string>
 </dict>

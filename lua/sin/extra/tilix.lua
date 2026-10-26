@@ -1,14 +1,14 @@
-local colors = require("cyberdream.colors")
-local util = require("cyberdream.util")
+local colors = require("sin.colors")
+local util = require("sin.util")
 
 local M = {}
 
---- Generate cyberdream theme for tilix.
+--- Generate sin theme for tilix.
 --- @param variant string: Variation of the colorscheme to use.
 function M.generate(variant)
     local template = [==[
 {
-    "name": "cyberdream",
+    "name": "sin",
     "comment": "A high-contrast, futuristic & vibrant colourscheme",
     "background-color": "${bg}",
     "foreground-color": "${fg}",

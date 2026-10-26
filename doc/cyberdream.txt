@@ -1,15 +1,15 @@
-*cyberdream.txt*             For Neovim >= 0.9.0             Last change: 2024
+*sin.txt*             For Neovim >= 0.9.0             Last change: 2024
 
 ==============================================================================
-Table of Contents                               *cyberdream-table-of-contents*
+Table of Contents                               *sin-table-of-contents*
 
-  - Features                                             |cyberdream-features|
-  - Installation                                     |cyberdream-installation|
-  - Usage                                                   |cyberdream-usage|
-  - Configuring                                       |cyberdream-configuring|
-  - ‍ Recipes                                       |cyberdream-‍-recipes|
-  - Contributing                                     |cyberdream-contributing|
-1. Links                                                    |cyberdream-links|
+  - Features                                             |sin-features|
+  - Installation                                     |sin-installation|
+  - Usage                                                   |sin-usage|
+  - Configuring                                       |sin-configuring|
+  - ‍ Recipes                                       |sin-‍-recipes|
+  - Contributing                                     |sin-contributing|
+1. Links                                                    |sin-links|
 
 A high-contrast, futuristic & vibrant theme for neovim
 
@@ -24,7 +24,7 @@ A high-contrast, futuristic & vibrant theme for neovim
 
 
 
-FEATURES                                                 *cyberdream-features*
+FEATURES                                                 *sin-features*
 
 - **Transparency-first design** - all design decisions are made with transparency in mind
 - **High contrast** - Colours have been carefully chosen to be cohesive and easy on the eyes while still being easy to distinguish
@@ -34,13 +34,13 @@ Supported Plugins ~
  alpha-nvim dashboard-nvim gitsigns.nvim heirline-components.nvim indent-blankline.nvim lazy.nvim leap.nvim lualine.nvim noice.nvim nvim-cmp nvim-notify nvim-treesitter nvim-treesitter-context rainbow-delimiters.nvim telescope.nvim which-key.nvim
 
 
-INSTALLATION                                         *cyberdream-installation*
+INSTALLATION                                         *sin-installation*
 
 Lazy1
 
 >lua
     {
-        "scottmckendry/cyberdream.nvim",
+        "scottmckendry/sin.nvim",
         lazy = false,
         priority = 1000,
     }
@@ -49,18 +49,18 @@ Lazy1
 Packer:
 
 >lua
-    use { "scottmckendry/cyberdream.nvim" }
+    use { "scottmckendry/sin.nvim" }
 <
 
 Lualine(optional):
 
 >lua
     {
-        local cyberdream = require("lualine.themes.cyberdream").get_theme() -- as of v2.0.0. For older versions, use `require("lualine.themes.cyberdream")`
+        local sin = require("lualine.themes.cyberdream").get_theme() -- as of v2.0.0. For older versions, use `require("lualine.themes.cyberdream")`
         require("lualine").setup({
             -- ... other config
             options = {
-                theme = "cyberdream",
+                theme = "sin",
             },
             -- ... other config
         })
@@ -72,21 +72,21 @@ See my personal lualine config here
 for an example.
 
 
-USAGE                                                       *cyberdream-usage*
+USAGE                                                       *sin-usage*
 
 >lua
-    vim.cmd("colorscheme cyberdream")
+    vim.cmd("colorscheme sin")
 <
 
 
-CONFIGURING                                           *cyberdream-configuring*
+CONFIGURING                                           *sin-configuring*
 
 Calling `setup` is optional, but allows you to configure the theme to your
 liking. Below is an example of all the available configuration options with
 their default values:
 
 >lua
-    require("cyberdream").setup({
+    require("sin").setup({
         -- Enable transparent background
         transparent = false,
     
@@ -111,12 +111,12 @@ their default values:
                 -- Example:
                 Comment = { fg = "#696969", bg = "NONE", italic = true },
     
-                -- Complete list can be found in `lua/cyberdream/theme.lua`
+                -- Complete list can be found in `lua/sin/theme.lua`
             },
     
             -- Override a color entirely
             colors = {
-                -- For a list of colors see `lua/cyberdream/colours.lua`
+                -- For a list of colors see `lua/sin/colours.lua`
                 -- Example:
                 bg = "#000000",
                 green = "#00ff00",
@@ -127,7 +127,7 @@ their default values:
 <
 
 
-‍ RECIPES                                           *cyberdream-‍-recipes*
+‍ RECIPES                                           *sin-‍-recipes*
 
 Include these alongside the `setup` function to add additional functionality to
 the theme.
@@ -137,7 +137,7 @@ MAP A KEY TO TOGGLE BETWEEN LIGHT AND DARK MODE
 
 >lua
     -- Add a custom keybinding to toggle the colorscheme
-    vim.api.nvim_set_keymap("n", "<leader>tt", ":CyberdreamToggleMode<CR>", { noremap = true, silent = true })
+    vim.api.nvim_set_keymap("n", "<leader>tt", ":sinToggleMode<CR>", { noremap = true, silent = true })
 <
 
 
@@ -146,7 +146,7 @@ CREATE AN AUTOCMD TO HOOK INTO THE TOGGLE EVENT AND RUN CUSTOM CODE
 >lua
     -- The event data property will contain a string with either "default" or "light" respectively
     vim.api.nvim_create_autocmd("User", {
-        pattern = "CyberdreamToggleMode",
+        pattern = "sinToggleMode",
         callback = function(event)
             -- Your custom code here!
             -- For example, notify the user that the colorscheme has been toggled
@@ -156,7 +156,7 @@ CREATE AN AUTOCMD TO HOOK INTO THE TOGGLE EVENT AND RUN CUSTOM CODE
 <
 
 
-CONTRIBUTING                                         *cyberdream-contributing*
+CONTRIBUTING                                         *sin-contributing*
 
 Pull requests are welcome. If a plugin you use is not supported, please open an
 issue and I’ll try to add support for it. If you have any suggestions or
@@ -166,11 +166,11 @@ feedback, please open an issue.
 <http://www.lazyvim.org/plugins/colorscheme> for specific instructions.
 
 ==============================================================================
-1. Links                                                    *cyberdream-links*
+1. Links                                                    *sin-links*
 
-1. *image*: https://github.com/scottmckendry/cyberdream.nvim/assets/39483124/55ad863e-11e6-4539-bf67-118ea328fb5b
-2. *image*: https://github.com/scottmckendry/cyberdream.nvim/assets/39483124/387a32f3-da38-4e96-b1e6-ea55591ec9ae
-3. *image*: https://github.com/scottmckendry/cyberdream.nvim/assets/39483124/c0188d60-d62b-4a15-965d-a19757c484e6
+1. *image*: https://github.com/scottmckendry/sin.nvim/assets/39483124/55ad863e-11e6-4539-bf67-118ea328fb5b
+2. *image*: https://github.com/scottmckendry/sin.nvim/assets/39483124/387a32f3-da38-4e96-b1e6-ea55591ec9ae
+3. *image*: https://github.com/scottmckendry/sin.nvim/assets/39483124/c0188d60-d62b-4a15-965d-a19757c484e6
 
 Generated by panvimdoc <https://github.com/kdheepak/panvimdoc>
 

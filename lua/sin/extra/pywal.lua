@@ -1,9 +1,9 @@
-local colors = require("cyberdream.colors")
-local util = require("cyberdream.util")
+local colors = require("sin.colors")
+local util = require("sin.util")
 
 local M = {}
 
---- Generate cyberdream theme for pywal.
+--- Generate sin theme for pywal.
 --- @param variant string: Variation of the colorscheme to use.
 function M.generate(variant)
     local template = [==[

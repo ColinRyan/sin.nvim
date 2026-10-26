@@ -1,5 +1,5 @@
-local colors = require("cyberdream.colors")
-local util = require("cyberdream.util")
+local colors = require("sin.colors")
+local util = require("sin.util")
 
 local M = {}
 
@@ -26,8 +26,8 @@ function M.generate(variant)
     t.pastel_pink = format_color(util.blend(colors[variant].fg, colors[variant].pink))
     t.turquoise = format_color(util.blend(colors[variant].green, colors[variant].cyan, 0.3))
     local template = [==[
-# name: 'cyberdream'
-# url: 'https://github.com/scottmckendry/cyberdream.nvim'
+# name: 'sin'
+# url: 'https://github.com/scottmckendry/sin.nvim'
 # preferred_background: ${bg}
 
 fish_color_normal ${fg}

@@ -1,5 +1,5 @@
-local colors = require("cyberdream.colors")
-local util = require("cyberdream.util")
+local colors = require("sin.colors")
+local util = require("sin.util")
 
 local M = {}
 
@@ -24,7 +24,7 @@ end
 function M.generate(variant)
     local t = format_colors(colors[variant])
     local template = [==[
-# cyberdream theme for alacritty
+# sin theme for alacritty
 [[colors.indexed_colors]]
 color = "${orange}"
 index = 16

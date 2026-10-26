@@ -1,4 +1,4 @@
--- cyberdream theme for wezterm
+-- sin theme for wezterm
 return {
     foreground = "#16181a",
     background = "#ffffff",

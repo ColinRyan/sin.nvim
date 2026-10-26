@@ -1,13 +1,13 @@
-local colors = require("cyberdream.colors")
-local util = require("cyberdream.util")
+local colors = require("sin.colors")
+local util = require("sin.util")
 
 local M = {}
 
---- Generate cyberdream theme for tmux.
+--- Generate sin theme for tmux.
 --- @param variant string: Variation of the colorscheme to use.
 function M.generate(variant)
     local template = [==[
-# cyberdream theme for tmux (catppuccin)
+# sin theme for tmux (catppuccin)
 thm_bg="${bgAlt}"
 thm_fg="${fg}"
 thm_cyan="${cyan}"

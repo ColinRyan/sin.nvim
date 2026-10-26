@@ -407,6 +407,7 @@ M.defaults = {
         default = true,
         link = "@keyword",
     },
+
     ["@variable.builtin"] = {
         default = true,
         link = "Special",

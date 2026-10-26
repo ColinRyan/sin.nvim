@@ -1,5 +1,5 @@
-local ts = require("cyberdream.treesitter")
-local config = require("cyberdream.config")
+local ts = require("sin.treesitter")
+local config = require("sin.config")
 local M = {}
 
 --- Sets the highlight group to the given table of colors.
@@ -41,7 +41,7 @@ function M.load(theme)
     end
 
     vim.o.termguicolors = true
-    vim.g.colors_name = "cyberdream"
+    vim.g.colors_name = "sin"
 
     if ts.new_style() then
         for group, colors in pairs(ts.defaults) do
@@ -103,10 +103,10 @@ end
 --- @param new_opts Config
 --- @return Config
 function M.set_options(new_opts)
-    local opts = vim.g.cyberdream_opts
-    vim.g.cyberdream_opts = vim.tbl_deep_extend("force", opts, new_opts)
+    local opts = vim.g.sin_opts
+    vim.g.sin_opts = vim.tbl_deep_extend("force", opts, new_opts)
 
-    return vim.g.cyberdream_opts
+    return vim.g.sin_opts
 end
 
 --- Apply options to the colorscheme.
@@ -114,13 +114,13 @@ end
 function M.apply_options(opts)
     -- Update the colorscheme
     config.setup(opts)
-    vim.cmd("colorscheme cyberdream")
+    vim.cmd("colorscheme sin")
 end
 
 --- Toggle the theme variant between "default" and "light".
 --- @return string new variant
 function M.toggle_theme_variant()
-    local opts = vim.g.cyberdream_opts
+    local opts = vim.g.sin_opts
     -- Handle the "auto" variant without overwriting the value in opts.
     if opts.theme.variant == "auto" then
         return M.toggle_theme_auto()
@@ -152,8 +152,9 @@ function M.toggle_lualine_theme()
         return
     end
 
+    package.loaded["lualine.themes.sin"] = nil
     local lualine_opts = require("lualine").get_config()
-    local lualine_theme = require("lualine.themes.cyberdream").get_theme()
+    local lualine_theme = require("lualine.themes.sin")
     lualine_opts.options.theme = lualine_theme
     require("lualine").setup(lualine_opts)
 end

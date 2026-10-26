@@ -1,13 +1,13 @@
-local colors = require("cyberdream.colors")
-local util = require("cyberdream.util")
+local colors = require("sin.colors")
+local util = require("sin.util")
 
 local M = {}
 
---- Generate cyberdream theme for wezterm.
+--- Generate sin theme for wezterm.
 --- @param variant string: Variation of the colorscheme to use.
 function M.generate(variant)
     local template = [==[
--- cyberdream theme for wezterm
+-- sin theme for wezterm
 return {
     foreground = "${fg}",
     background = "${bg}",

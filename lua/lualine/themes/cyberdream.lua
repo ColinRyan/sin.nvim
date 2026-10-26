@@ -1,16 +1,16 @@
 local M = {}
 
 M.get_theme = function()
-    local colors = require("cyberdream.colors").default
-    local opts = require("cyberdream.config").options
+    local colors = require("sin.colors").default
+    local opts = require("sin.config").options
 
     if opts.theme.variant == "light" then
-        colors = require("cyberdream.colors").light
+        colors = require("sin.colors").light
     end
 
     if opts.theme.variant == "auto" then
         if vim.o.background == "light" then
-            colors = require("cyberdream.colors").light
+            colors = require("sin.colors").light
         end
     end
 
@@ -18,7 +18,7 @@ M.get_theme = function()
         colors.bg = "NONE"
     end
 
-    local cyberdream = {
+    local sin = {
         normal = {
             a = { fg = colors.blue, bg = colors.bg },
             b = { fg = colors.cyan, bg = colors.bg },
@@ -41,7 +41,7 @@ M.get_theme = function()
         },
     }
 
-    return cyberdream
+    return sin
 end
 
 return M

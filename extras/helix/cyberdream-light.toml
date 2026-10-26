@@ -1,4 +1,4 @@
-# cyberdream theme for helix
+# sin theme for helix
 "ui.background" = "bg"
 "ui.text" = "fg"
 "ui.cursor" = { bg = "fg", fg = "bg" }
